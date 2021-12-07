@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{33C7F2A2-4AEA-64FB-8DAF-0F32154145E8}</ProjectGuid>
+    <ProjectGuid>{B09C52F0-15F2-545E-1894-055C4079F0E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -353,10 +353,12 @@
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Packages\QRCoder.1.3.4\lib\net35\QRCoder.dll" />
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\PolygonSciFiCity\Shaders\Polygon_Triplanar.shader" />
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\PolygonSciFiCity\Shaders\Polygon_UVScroll.shader" />
     <None Include="Assets\3rdParty\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMP_SDF.shader" />
@@ -1013,23 +1015,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="LeanCommon.csproj">
-      <Project>{5F33B1B9-9801-72E3-D3B6-0BE732F8089A}</Project>
+      <Project>{B9660531-2924-4D73-6F22-09AC15B6B36E}</Project>
       <Name>LeanCommon</Name>
     </ProjectReference>
     <ProjectReference Include="LeanGUI.csproj">
-      <Project>{1A6356EB-DA13-4D05-E0A2-B4102EFEEE87}</Project>
+      <Project>{65B3C133-6844-7999-8952-2621367A0AA8}</Project>
       <Name>LeanGUI</Name>
     </ProjectReference>
     <ProjectReference Include="endel.nativewebsocket.csproj">
-      <Project>{E15FCF00-000C-B7F6-0240-791AF76D32E0}</Project>
+      <Project>{13616E79-513A-0532-D67C-55DDDD3225EE}</Project>
       <Name>endel.nativewebsocket</Name>
     </ProjectReference>
     <ProjectReference Include="LeanTransition.Editor.csproj">
-      <Project>{2E294EDD-27B9-9A60-ECFB-0CE5E06F28CE}</Project>
+      <Project>{31FBD7F0-B863-41DA-5C09-5BCBAFE915D9}</Project>
       <Name>LeanTransition.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="LeanTransition.csproj">
-      <Project>{03A0A499-4A5D-BF38-396D-7221417375F7}</Project>
+      <Project>{423FAF58-6B95-C652-1C4D-1CE6773917B6}</Project>
       <Name>LeanTransition</Name>
     </ProjectReference>
   </ItemGroup>
