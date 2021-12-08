@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
@@ -10,7 +11,8 @@ public class ThirdPersonMovement : MonoBehaviour
     public float sprintSpeed = 12f;
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVel;
-
+    public TMP_Text addressText;
+    bool isAuthenticated = false;
     private Animator anim;
 
     // Start is called before the first frame update
@@ -24,6 +26,15 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        updateText();
+
+        if(Input.GetKey(KeyCode.Space))
+        {
+            jump();
+
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -75,6 +86,25 @@ public class ThirdPersonMovement : MonoBehaviour
     private void idle()
     {
         anim.SetFloat("Speed", 0.0f);
+    }
+    private void jump()
+    {
+
+        anim.SetBool("Jump", true);
+        Debug.Log("JUMPING");
+    }
+
+    private void updateText()
+    {
+        // Update character address if it has not been set
+        if (!isAuthenticated && MoralisInterface.GetUser() != null)
+        {
+            string addr = MoralisInterface.GetUser().authData["moralisEth"]["id"].ToString();
+
+            addressText.text = string.Format("{0}...{1}", addr.Substring(0, 6), addr.Substring(addr.Length - 3, 3));
+
+            isAuthenticated = true;
+        }
     }
 }
 

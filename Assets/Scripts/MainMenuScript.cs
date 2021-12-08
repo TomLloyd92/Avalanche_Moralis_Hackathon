@@ -60,7 +60,7 @@ public class MainMenuScript : MonoBehaviour
         menuBackground = (Image)gameObject.GetComponent(typeof(Image));
 
         HostManifestData hostManifestData = new HostManifestData()
-        { 
+        {
             Version = Version,
             Identifier = ApplicationName,
             Name = ApplicationName,
@@ -182,7 +182,7 @@ public class MainMenuScript : MonoBehaviour
     public async void Quit()
     {
         Debug.Log("QUIT");
-        
+
         // Disconnect wallet subscription.
         await walletConnect.Session.Disconnect();
         // CLear out the session so it is re-establish on sign-in.

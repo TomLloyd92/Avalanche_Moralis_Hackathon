@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoScene.unity
     guid: 40d4add513190a441bb79c9ffe0fff3a
+  - enabled: 0
+    path: Assets/Scenes/CharacterControlScene.unity
+    guid: c6d709ee7b150984d9e72bf980e7b6f4
   m_configObjects: {}

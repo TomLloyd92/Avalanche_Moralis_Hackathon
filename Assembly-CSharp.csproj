@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,9 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\JsonUtilities.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\NftMetadataCollection.cs" />
@@ -261,6 +264,7 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\FileUtilities.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\NftTransferCollection.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api\Moralis.cs" />
+    <Compile Include="Assets\Scripts\Player\ThirdPersonMovement.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Objects\MoralisFileState.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\MutableServiceHub.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\WCSessionRequestRequest.cs" />
@@ -316,8 +320,8 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\QueryExtensions.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Objects\MoralisAcl.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp.Unity\WalletConnect.cs" />
-    <Compile Include="Assets\Scripts\Moralis\MoralisLiveQueryController.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\IdentityEqualityComparer.cs" />
+    <Compile Include="Assets\Scripts\Moralis\MoralisLiveQueryController.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\NftContractMetadataCollection.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Abstractions\IServiceHubComposer.cs" />
     <Compile Include="Assets\Scripts\Moralis\WalletSelectItem.cs" />
@@ -347,7 +351,6 @@
     <Compile Include="Assets\Scripts\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Utils\Hex.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
-    <Compile Include="Assets\Scripts\Player\ThirdPersonMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3rdParty\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -968,8 +971,14 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.003">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.003.dll</HintPath>
@@ -1012,12 +1021,6 @@
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
