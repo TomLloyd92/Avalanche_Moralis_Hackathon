@@ -200,7 +200,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184908644}
-  m_LocalRotation: {x: 0.10410984, y: -0.000000017646416, z: 0.000000001845735, w: 0.99456584}
+  m_LocalRotation: {x: 0.10410984, y: 0.000000017646423, z: -0.0000000018457358, w: 0.99456584}
   m_LocalPosition: {x: 0, y: 3.8309999, z: -15.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -619,6 +619,14 @@ PrefabInstance:
       propertyPath: walletConnect
       value: 
       objectReference: {fileID: 1561941687}
+    - target: {fileID: 1417559458672933477, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
+      propertyPath: MoralisServerURI
+      value: https://vmjdcyv0xxtm.usemoralis.com:2053/server
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417559458672933477, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
+      propertyPath: MoralisApplicationId
+      value: kh5ZPG2mM7ab1Lu2rmBjlBi4rHmpbViWj2kuikOa
+      objectReference: {fileID: 0}
     - target: {fileID: 1417559458854033131, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -706,6 +714,14 @@ PrefabInstance:
     - target: {fileID: 1417559458854033143, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417559459487634487, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
+      propertyPath: ChainId
+      value: 43113
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -357.99997
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
@@ -1063,11 +1079,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4146695136173742884, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000042856407
+      value: -0.0000000042856403
       objectReference: {fileID: 0}
     - target: {fileID: 4146695136173742884, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -3.701516e-10
+      value: 3.7015158e-10
       objectReference: {fileID: 0}
     - target: {fileID: 4146695136426964747, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_RootOrder
@@ -1127,23 +1143,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4146695136706224828, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12218323
+      value: 0.122183256
       objectReference: {fileID: 0}
     - target: {fileID: 4146695136706224828, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000030489364
+      value: -2.4198927e-15
       objectReference: {fileID: 0}
     - target: {fileID: 4146695136706224828, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000037534114
+      value: 1.6126688e-16
       objectReference: {fileID: 0}
     - target: {fileID: 4146695137110162167, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017639547
+      value: 0.000000017639554
       objectReference: {fileID: 0}
     - target: {fileID: 4146695137110162167, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000018464847
+      value: -0.0000000018464854
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36247a4a4e56b6b4fba89c868159ebe5, type: 3}
