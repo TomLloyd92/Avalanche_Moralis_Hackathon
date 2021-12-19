@@ -59,7 +59,7 @@ public class MovementMultiplayer : NetworkBehaviour
         {
             return;
         }
-        //updateText();
+        updateText();
 
         if (Input.GetKey(KeyCode.Space))
         {

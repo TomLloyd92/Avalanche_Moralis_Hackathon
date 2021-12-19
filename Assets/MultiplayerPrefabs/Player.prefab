@@ -105,11 +105,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  freeLookCamera: {fileID: 0}
   speed: 6
   sprintSpeed: 12
   turnSmoothTime: 0.1
   turnSmoothVel: 0
-  addressText: {fileID: 0}
+  addressText: {fileID: 7395024209142973633}
 --- !u!114 &7549737614940627634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,3 +326,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4563291280582222993, guid: 6c0459afe679e824a9f504985723dc62, type: 3}
   m_PrefabInstance: {fileID: 4050954886782885121}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7395024209142973633 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6816063172990081472, guid: 6c0459afe679e824a9f504985723dc62, type: 3}
+  m_PrefabInstance: {fileID: 4050954886782885121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
