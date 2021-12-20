@@ -17,8 +17,9 @@ public class NFT_Render : MonoBehaviour
     public string Symbol;
 
     public SpriteRenderer spriteRenderer;
-
     private Sprite targetSprite;
+
+    public GameObject frame;
 
     private void Start()
     {
@@ -42,9 +43,13 @@ public class NFT_Render : MonoBehaviour
             {
                 if (www.isDone)
                 {
-                    var texture = DownloadHandlerTexture.GetContent(www);
-                    var rect = new Rect(0, 0, 600f, 600f);
+                    var texture = DownloadHandlerTexture.GetContent(www);                    
+                    var rect = new Rect(0, 0, texture.width,texture.height);
                     var sprite = Sprite.Create(texture, rect, new Vector2(0.5f, 0.5f));
+                    
+                    transform.localScale -= new Vector3(0.75f, 0.75f, 0.75f);
+                    Instantiate(frame, this.transform);
+                    
                     callback(sprite);
                 }
             }

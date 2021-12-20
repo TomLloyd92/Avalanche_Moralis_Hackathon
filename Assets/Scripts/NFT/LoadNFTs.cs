@@ -20,6 +20,14 @@ public class LoadNFTs : MonoBehaviour
     public int ChainId;
     private bool tokensLoaded;
     public GameObject NFT;
+    private int currentPicture;
+    public Transform[] transforms;
+
+
+    private void Update()
+    {
+        PopulateWallet();
+    }
 
     public void PopulateWallet()
     {
@@ -44,14 +52,17 @@ public class LoadNFTs : MonoBehaviour
             NftOwnerCollection tokens = MoralisInterface.GetClient().Web3Api.Account.GetNFTs(addr.ToLower(), (ChainList)ChainId);
             
             Debug.Log("THE FOLLOWING ARE THE NFTS LOADING: ");
-
+            Debug.Log(tokens.Result.Count);
 
             foreach(NftOwner token in tokens.Result)
             {
-                GameObject nft = Instantiate(NFT);
+
+                GameObject nft = Instantiate(NFT, transforms[currentPicture]);
                 nft.GetComponent<NFT_Render>().name = token.Name;
                 nft.GetComponent<NFT_Render>().tokenAddress = token.TokenAddress;
                 nft.GetComponent<NFT_Render>().tokenURI = token.TokenUri;
+
+                currentPicture++;
             }
 
 

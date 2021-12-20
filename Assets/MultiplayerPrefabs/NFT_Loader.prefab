@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChainId: 43113
+  NFT: {fileID: 336468318204450734, guid: 55d8f6fa8ea4c7e42b98e8e92b3700cc, type: 3}
+  transforms: []
