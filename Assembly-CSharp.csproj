@@ -108,6 +108,7 @@
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Events\Model\GenericEvent.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\ReflectionUtilities.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\LateInitializer.cs" />
+    <Compile Include="Assets\Scripts\NFT\LoadNFTs.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\Infrastructure\MetadataService.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\ChestController.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\WalletBalanceController.cs" />
@@ -248,6 +249,7 @@
     <Compile Include="Assets\Scripts\Moralis\MobileLogin.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\MoralisQuery.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\Ethereum\EthSendTransaction.cs" />
+    <Compile Include="Assets\Scripts\NFT\NFT_Render.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ClientServices\SessionServiceExtensions.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisInterface.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Events\EventFactory.cs" />
@@ -350,8 +352,6 @@
     <Compile Include="Assets\Scripts\Moralis_OTHER\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Utils\Hex.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
-    <Compile Include="Assets\Scripts\NFT\LoadNFTs.cs" />
-    <Compile Include="Assets\Scripts\NFT\NFT_Render.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
