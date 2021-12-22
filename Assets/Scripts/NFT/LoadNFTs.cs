@@ -70,6 +70,11 @@ public class LoadNFTs : NetworkBehaviour
 
             foreach(NftOwner token in tokens.Result)
             {
+                if(currentPicture >= 3)
+                {
+
+                    yield return 0;
+                }
 
                 GameObject nft = Instantiate(NFT, transforms[currentPicture]);
                 nft.GetComponent<NFT_Render>().name = token.Name;

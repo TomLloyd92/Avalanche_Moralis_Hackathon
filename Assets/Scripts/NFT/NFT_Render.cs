@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -13,8 +14,11 @@ public class NFT_Render : MonoBehaviour
     public string tokenURI;
     public string metadata;
     public string Amount;
-    public string nameOfNFT;
+    public string name;
     public string Symbol;
+    public TMP_Text addressText;
+    public TMP_Text tokenIdText;
+    public TMP_Text tokenNameText;
 
     public SpriteRenderer spriteRenderer;
     private Sprite targetSprite;
@@ -48,10 +52,20 @@ public class NFT_Render : MonoBehaviour
                     var sprite = Sprite.Create(texture, rect, new Vector2(0.5f, 0.5f));
                     
                     transform.localScale -= new Vector3(0.75f, 0.75f, 0.75f);
+
+                    transform.position = (transform.position + new Vector3(0, 3 + texture.height / 1000 , 0));
+
                     GameObject NFTframe = Instantiate(frame, this.transform);
-                    NFTframe.transform.localScale = new Vector3(texture.width/100 + 1,texture.height/100 + 1,.1f);
+                    NFTframe.transform.localScale = new Vector3(texture.width/100 + 1, texture.height/100 + 1,.1f);
                     
+                   
                     callback(sprite);
+                    addressText.SetText("Tokken Address: \n" + tokenAddress);
+                    addressText.transform.position += new Vector3(0, -NFTframe.transform.localScale.y * 0.15f, 0);
+                    tokenIdText.SetText("Token Id: " + tokenId);
+                    tokenIdText.transform.position += new Vector3(0, -NFTframe.transform.localScale.y * 0.15f, 0);
+                    tokenNameText.SetText("Token Name: " + name);
+                    tokenNameText.transform.position += new Vector3(0, -NFTframe.transform.localScale.y * 0.15f, 0);
                 }
             }
         }
