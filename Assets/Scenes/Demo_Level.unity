@@ -939,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -302.0007
+      value: -305.00037
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
@@ -1574,7 +1574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1443391984262165877, guid: 48cd3e86d83fa0449a2fd117cf348525, type: 3}
       propertyPath: showDebugMessages
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1443391984262165877, guid: 48cd3e86d83fa0449a2fd117cf348525, type: 3}
       propertyPath: spawnPrefabs.Array.size

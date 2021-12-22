@@ -75,6 +75,7 @@ public class LoadNFTs : NetworkBehaviour
                 nft.GetComponent<NFT_Render>().name = token.Name;
                 nft.GetComponent<NFT_Render>().tokenAddress = token.TokenAddress;
                 nft.GetComponent<NFT_Render>().tokenURI = token.TokenUri;
+                nft.GetComponent<NFT_Render>().tokenId = int.Parse(token.TokenId);
 
 
                 currentPicture++;

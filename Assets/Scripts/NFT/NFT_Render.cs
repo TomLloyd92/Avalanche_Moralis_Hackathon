@@ -48,7 +48,8 @@ public class NFT_Render : MonoBehaviour
                     var sprite = Sprite.Create(texture, rect, new Vector2(0.5f, 0.5f));
                     
                     transform.localScale -= new Vector3(0.75f, 0.75f, 0.75f);
-                    Instantiate(frame, this.transform);
+                    GameObject NFTframe = Instantiate(frame, this.transform);
+                    NFTframe.transform.localScale = new Vector3(texture.width/100 + 1,texture.height/100 + 1,.1f);
                     
                     callback(sprite);
                 }
