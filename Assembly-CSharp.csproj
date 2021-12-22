@@ -352,6 +352,7 @@
     <Compile Include="Assets\Scripts\Moralis_OTHER\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Utils\Hex.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

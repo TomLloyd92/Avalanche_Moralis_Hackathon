@@ -12056,6 +12056,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -302.0003
+      objectReference: {fileID: 0}
     - target: {fileID: 2950721468647748005, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: walletConnect
       value: 
@@ -13969,6 +13973,8 @@ GameObject:
   - component: {fileID: 7044637423766271676}
   - component: {fileID: 7044637423766271679}
   - component: {fileID: 7044637423766271678}
+  - component: {fileID: 7044637423766271680}
+  - component: {fileID: 7044637423766271673}
   m_Layer: 0
   m_Name: Footman
   m_TagString: Untagged
@@ -13976,6 +13982,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7044637423766271673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7044637423766271672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!4 &7044637423766271674
 Transform:
   m_ObjectHideFlags: 0
@@ -14086,6 +14110,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7044637423766271680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7044637423766271672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3692644868
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &7044637423789751108
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts;
 using UnityEngine.Networking;
+using Mirror;
 
-public class LoadNFTs : MonoBehaviour
+public class LoadNFTs : NetworkBehaviour
 {
 
     //await Moralis.Plugins.covalent.getErc20TokenTransfersForAddress(GetErc20TokenTransactionsForAddressDto);
@@ -19,9 +20,22 @@ public class LoadNFTs : MonoBehaviour
     /// </summary>
     public int ChainId;
     private bool tokensLoaded;
-    public GameObject NFT;
+    [SerializeField]
+    private GameObject NFT;
     private int currentPicture;
     public Transform[] transforms;
+
+    #region Server
+    [Command]
+    private void CmdSpawnNFTs()
+    {
+
+    }
+    #endregion
+
+    #region Client
+
+    #endregion
 
 
     private void Update()
@@ -31,7 +45,7 @@ public class LoadNFTs : MonoBehaviour
 
     public void PopulateWallet()
     {
-        if (!tokensLoaded)
+        if (!tokensLoaded && isServer)
         {
             StartCoroutine(BuildTokenList());
 
@@ -62,8 +76,10 @@ public class LoadNFTs : MonoBehaviour
                 nft.GetComponent<NFT_Render>().tokenAddress = token.TokenAddress;
                 nft.GetComponent<NFT_Render>().tokenURI = token.TokenUri;
 
+
                 currentPicture++;
             }
+
 
 
             

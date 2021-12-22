@@ -137,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336468318204450733}
   - component: {fileID: 293239777}
+  - component: {fileID: 8528828089159438715}
   m_Layer: 0
   m_Name: NFT_Frame
   m_TagString: Untagged
@@ -181,6 +182,22 @@ MonoBehaviour:
   Symbol: 
   spriteRenderer: {fileID: 7446270572561807700}
   frame: {fileID: 8745685346306364422, guid: e3476bc9e35003e458f8c4ca0f8d32ee, type: 3}
+--- !u!114 &8528828089159438715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336468318204450734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &336468318561037358
 GameObject:
   m_ObjectHideFlags: 0

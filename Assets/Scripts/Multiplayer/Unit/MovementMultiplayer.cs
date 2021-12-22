@@ -19,10 +19,22 @@ public class MovementMultiplayer : NetworkBehaviour
     bool isAuthenticated = false;
     private Animator anim;
 
+    private Color teamColor = new Color();
+
+    public Color getTeamColor()
+    {
+        return teamColor;
+    }
+
 
  
     #region Server
     //Any Server Side Checking for movement here
+    [Server]
+    public void SetTeamColor(Color newTeamColor)
+    {
+        teamColor = newTeamColor;
+    }
     #endregion
 
     #region Client
