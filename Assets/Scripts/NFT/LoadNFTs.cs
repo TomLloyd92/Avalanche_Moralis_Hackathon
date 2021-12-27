@@ -45,7 +45,7 @@ public class LoadNFTs : NetworkBehaviour
 
     public void PopulateWallet()
     {
-        if (!tokensLoaded && isServer)
+        if (!tokensLoaded)
         {
             StartCoroutine(BuildTokenList());
 

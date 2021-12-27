@@ -246,6 +246,7 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\Infrastructure\InstallationService.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api\Api\NativeApi.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\MoralisServiceHub.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Moralis\MobileLogin.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\MoralisQuery.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\Ethereum\EthSendTransaction.cs" />
@@ -352,7 +353,7 @@
     <Compile Include="Assets\Scripts\Moralis_OTHER\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Utils\Hex.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Multiplayer\Messenger\MessengerBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
