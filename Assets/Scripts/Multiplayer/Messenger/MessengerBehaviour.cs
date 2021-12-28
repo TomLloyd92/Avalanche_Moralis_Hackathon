@@ -16,6 +16,10 @@ public class MessengerBehaviour : NetworkBehaviour
     [SerializeField]
     private TMP_InputField inputField = null;
 
+    [SerializeField]
+    private GameObject chatBubble;
+
+
     private static event Action<string> OnMessage;
 
     public override void OnStartAuthority()
@@ -23,6 +27,9 @@ public class MessengerBehaviour : NetworkBehaviour
         chatUI.SetActive(true);
 
         OnMessage += HandleNewMessage;
+
+
+
     }
 
     [ClientCallback]
@@ -53,6 +60,7 @@ public class MessengerBehaviour : NetworkBehaviour
             return;
         }
 
+
         CmdSendMessage(message);
         //Clear Field after send
         inputField.text = string.Empty;
@@ -67,6 +75,12 @@ public class MessengerBehaviour : NetworkBehaviour
     [ClientRpc]
     private void RpcHandleMessage(string message)
     {
+        GameObject messageBubble = Instantiate(chatBubble, this.transform);
+        MessageBubble msgBubble = messageBubble.GetComponent<MessageBubble>();
+        msgBubble.setUp(message);
+        NetworkServer.Spawn(messageBubble);
+        Destroy(messageBubble, 4f);
+
         OnMessage?.Invoke($"\n{message}");
     }
 

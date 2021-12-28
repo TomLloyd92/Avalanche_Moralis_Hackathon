@@ -9,6 +9,8 @@ public class MessageBubble : MonoBehaviour
     private SpriteRenderer bubbleSprite;
     [SerializeField]
     private TMP_Text textTMP;
+    [SerializeField]
+    private GameObject bubble;
 
 
     // Start is called before the first frame update
@@ -22,7 +24,12 @@ public class MessageBubble : MonoBehaviour
         setUp("hello");
     }
 
-    private void setUp(string text)
+    public static void Create(Transform parent, Vector3 localposition, string text)
+    {
+
+    }
+
+    public void setUp(string text)
     {
         textTMP.SetText(text);
         //Make sure it updates
