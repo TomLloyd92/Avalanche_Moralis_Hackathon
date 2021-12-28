@@ -75,7 +75,7 @@ public class MovementMultiplayer : NetworkBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            jump();
+            //jump();
 
         }
 

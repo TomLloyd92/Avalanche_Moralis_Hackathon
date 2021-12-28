@@ -69,7 +69,7 @@ public class MessengerBehaviour : NetworkBehaviour
     [Command]
     private void CmdSendMessage(string message)
     {
-        RpcHandleMessage($"[{connectionToClient.connectionId}]: {message}");
+        RpcHandleMessage(message);
     }
 
     [ClientRpc]
@@ -81,7 +81,7 @@ public class MessengerBehaviour : NetworkBehaviour
         NetworkServer.Spawn(messageBubble);
         Destroy(messageBubble, 4f);
 
-        OnMessage?.Invoke($"\n{message}");
+        OnMessage?.Invoke($"\n[{ connectionToClient.connectionId}]:{ message}");
     }
 
     // Start is called before the first frame update
