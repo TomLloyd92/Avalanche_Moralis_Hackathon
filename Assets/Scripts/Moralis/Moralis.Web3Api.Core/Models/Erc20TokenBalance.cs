@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using TMPro;
 
 namespace Moralis.Web3Api.Models
 {

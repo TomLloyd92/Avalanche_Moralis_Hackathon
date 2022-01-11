@@ -65,8 +65,8 @@ public class LoadNFTs : NetworkBehaviour
 
             NftOwnerCollection tokens = MoralisInterface.GetClient().Web3Api.Account.GetNFTs(addr.ToLower(), (ChainList)ChainId);
             
-            Debug.Log("THE FOLLOWING ARE THE NFTS LOADING: ");
-            Debug.Log(tokens.Result.Count);
+            //Debug.Log("THE FOLLOWING ARE THE NFTS LOADING: ");
+            //Debug.Log(tokens.Result.Count);
 
             foreach(NftOwner token in tokens.Result)
             {
