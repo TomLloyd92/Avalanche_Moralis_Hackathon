@@ -57,7 +57,6 @@
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\ClientMeta.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\NftMetadataCollection.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\FlexibleListWrapper.cs" />
-    <Compile Include="Assets\Scripts\Multiplayer\Network\BlockchainNetowrkManager.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\Infrastructure\ObjectCoder.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp.Unity\Utils\WaitForTask.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Interfaces\IResolveApi.cs" />
@@ -222,6 +221,7 @@
     <Compile Include="Assets\Scripts\Moralis_OTHER\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api\Client\Web3ApiClient.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisSubscriptionQuery.cs" />
+    <Compile Include="Assets\Scripts\Player\SpawnPlayer.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Objects\MoralisSession.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\NftOwnerCollection.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\SavedSession.cs" />
@@ -357,7 +357,9 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\Live\OperationTypes.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
-    <Compile Include="Assets\Scripts\Player\SpawnPlayer.cs" />
+    <Compile Include="Assets\Prefabs\UI\JoinLobbyMenu.cs" />
+    <Compile Include="Assets\MultiplayerPrefabs\BlockchainNetworkManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\LobbyMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
