@@ -3,14 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LobbyMenu : MonoBehaviour
 {
     [SerializeField] public GameObject lobbyUI = null;
+    [SerializeField] public Button startGameButton = null;
 
     private void Start()
     {
         BlockchainNetworkManager.ClientOnConnected += HandleClientConnected;
+    }
+
+    public void StartGame()
+    {
+        NetworkClient.connection.identity.GetComponent<SpawnPlayer>().CmdStartGame();
     }
 
     private void OnDestroy()

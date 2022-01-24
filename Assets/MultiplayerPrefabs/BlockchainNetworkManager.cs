@@ -3,9 +3,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockchainNetworkManager : NetworkManager
 {
+    public GameObject player;
+
     public static event Action ClientOnConnected;
     public static event Action ClientOnDisconnected;
 
@@ -14,6 +17,19 @@ public class BlockchainNetworkManager : NetworkManager
     private bool isGameInProgress = false;
 
     #region Server
+
+    public override void OnServerChangeScene(string newSceneName)
+    {
+        if(SceneManager.GetActiveScene().name.StartsWith("Demo"))
+        {
+            foreach(SpawnPlayer player in Players)
+            {
+                GameObject baseInstance = Instantiate(playerPrefab);
+                NetworkServer.Spawn(baseInstance, player.connectionToClient);
+
+            }
+        }
+    }
 
     public override void OnServerConnect(NetworkConnection conn)
     {
@@ -83,6 +99,11 @@ public class BlockchainNetworkManager : NetworkManager
         base.OnClientDisconnect(conn);
 
         ClientOnDisconnected?.Invoke();
+    }
+
+    public override void OnStopClient()
+    {
+        Players.Clear();
     }
 
     #endregion

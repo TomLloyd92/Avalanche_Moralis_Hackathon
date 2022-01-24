@@ -16,13 +16,42 @@ public class SpawnPlayer : NetworkBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    [Command]
+    public void CmdStartGame()
+    {
+        ((BlockchainNetworkManager)NetworkManager.singleton).StartGame();
+    }
+
     #endregion
 
     #region client
     public override void OnStartClient()
     {
+        if(NetworkServer.active)
+        {
+            return;
+        }
+
+        ((BlockchainNetworkManager)NetworkManager.singleton).Players.Add(this);
+
         DontDestroyOnLoad(gameObject);
     }
+
+    public override void OnStopClient()
+    {
+        if(!isClientOnly)
+        {
+            return;
+        }
+
+        ((BlockchainNetworkManager)NetworkManager.singleton).Players.Remove(this);
+
+        if(!hasAuthority)
+        {
+            return;
+        }
+    }
+
     #endregion
 
     // Start is called before the first frame update
