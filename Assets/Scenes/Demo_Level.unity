@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transactions
       objectReference: {fileID: 0}
+    - target: {fileID: 8223994167869492842, guid: 923758349ca2b084a991833f302f8792, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8223994167869492843, guid: 923758349ca2b084a991833f302f8792, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1014,6 +1018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 2625999528673806564, guid: 0077f1ce4795df04f8fd653c60b4fc3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2625999528673806585, guid: 0077f1ce4795df04f8fd653c60b4fc3c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1303,6 +1311,10 @@ PrefabInstance:
     - target: {fileID: 5156096413931442231, guid: 6736b38a085f03243ba52e265cbda235, type: 3}
       propertyPath: m_Name
       value: ThirdPersonCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156096413931442231, guid: 6736b38a085f03243ba52e265cbda235, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5156096413931442249, guid: 6736b38a085f03243ba52e265cbda235, type: 3}
       propertyPath: m_RootOrder
@@ -1617,6 +1629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeanTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 1157105609571318975, guid: 4fea48de8c453bb42b51161f1807d55e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fea48de8c453bb42b51161f1807d55e, type: 3}
 --- !u!1001 &1068457574
@@ -1780,7 +1796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -290.50122
+      value: -292.99918
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
@@ -2073,6 +2089,10 @@ PrefabInstance:
     - target: {fileID: 5175095894888145820, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
       propertyPath: m_Name
       value: WalletConnect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175095894888145820, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5175095894888145821, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
       propertyPath: chainId
@@ -2709,6 +2729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 509979342066236304, guid: 3d886fbfc2f60e44d837efaf87d3370e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 509979342066236305, guid: 3d886fbfc2f60e44d837efaf87d3370e, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3013,6 +3037,10 @@ PrefabInstance:
     - target: {fileID: 509979342066236304, guid: 3d886fbfc2f60e44d837efaf87d3370e, type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 509979342066236304, guid: 3d886fbfc2f60e44d837efaf87d3370e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 509979342066236305, guid: 3d886fbfc2f60e44d837efaf87d3370e, type: 3}
       propertyPath: m_RootOrder

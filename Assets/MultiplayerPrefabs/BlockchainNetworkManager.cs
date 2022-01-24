@@ -18,13 +18,13 @@ public class BlockchainNetworkManager : NetworkManager
 
     #region Server
 
-    public override void OnServerChangeScene(string newSceneName)
+    public override void OnServerSceneChanged(string newSceneName)
     {
 
         foreach (SpawnPlayer player in Players)
         {
 
-            GameObject baseInstance = Instantiate(playerPre);
+            GameObject baseInstance = Instantiate(playerPre, new Vector3(0,0,0), Quaternion.identity);
             NetworkServer.Spawn(baseInstance, player.connectionToClient);
 
         }
