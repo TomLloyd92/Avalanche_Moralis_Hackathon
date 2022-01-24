@@ -2743,6 +2743,10 @@ PrefabInstance:
       propertyPath: onlineScene
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391984262165877, guid: 48cd3e86d83fa0449a2fd117cf348525, type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 5310049888585348531, guid: 9db707c303f8d554f92a2d0b98995c24, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48cd3e86d83fa0449a2fd117cf348525, type: 3}
 --- !u!1 &1395970500
