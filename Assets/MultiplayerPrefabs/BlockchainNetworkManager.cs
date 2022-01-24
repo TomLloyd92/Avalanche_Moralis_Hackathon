@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class BlockchainNetworkManager : NetworkManager
 {
-    public GameObject player;
+    public GameObject playerPre;
 
     public static event Action ClientOnConnected;
     public static event Action ClientOnDisconnected;
@@ -20,14 +20,21 @@ public class BlockchainNetworkManager : NetworkManager
 
     public override void OnServerChangeScene(string newSceneName)
     {
-        if(SceneManager.GetActiveScene().name.StartsWith("Demo"))
-        {
-            foreach(SpawnPlayer player in Players)
-            {
-                GameObject baseInstance = Instantiate(playerPrefab);
-                NetworkServer.Spawn(baseInstance, player.connectionToClient);
 
-            }
+        foreach (SpawnPlayer player in Players)
+        {
+
+            GameObject baseInstance = Instantiate(playerPre);
+            NetworkServer.Spawn(baseInstance, player.connectionToClient);
+
+        }
+
+
+
+        if (SceneManager.GetActiveScene().name.StartsWith("Demo_Level"))
+        {
+            Debug.Log("SPAWNING IN THE PLAYER");
+       
         }
     }
 

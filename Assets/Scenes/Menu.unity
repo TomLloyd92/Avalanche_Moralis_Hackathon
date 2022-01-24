@@ -831,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559458854033143, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -875,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -290.50107
+      value: -293.00095
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
@@ -1225,7 +1225,7 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 2241404250344135698, guid: d2beaa7cc4c77a04ca2bff108f1e8737, type: 3}
-  player: {fileID: 2241404250344135698, guid: d2beaa7cc4c77a04ca2bff108f1e8737, type: 3}
+  playerPre: {fileID: 2241404250344135698, guid: d2beaa7cc4c77a04ca2bff108f1e8737, type: 3}
 --- !u!114 &2080205506 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4398770860270342640, guid: 1834a4ca45c30374db4d8dc769de1aff, type: 3}

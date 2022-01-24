@@ -91,7 +91,7 @@ public class TokensBoard : NetworkBehaviour
                 MoralisInterface.GetClient().Web3Api.Account.GetTokenBalances(addr.ToLower(),
                                             (ChainList)ChainId);
 
-            Debug.Log("AMMOUNT OF ERC20 TOKENS: " + tokens.Count);
+            //Debug.Log("AMMOUNT OF ERC20 TOKENS: " + tokens.Count);
 
             foreach (Erc20TokenBalance token in tokens)
             {
@@ -129,7 +129,7 @@ public class TokensBoard : NetworkBehaviour
                     float.TryParse(token.Decimals, out tokenDecimals);
                 }
 
-                Debug.Log("Ammount of tokens" + ammountOfTokens);
+                //Debug.Log("Ammount of tokens" + ammountOfTokens);
                 ammountOfTokens++;
 
 
