@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &655460234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+  m_PrefabInstance: {fileID: 947766872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &853921677
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +281,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_Text
+      value: 0xF70576a5255fcCfE6551f3eC8De74c9E002E1A82
+      objectReference: {fileID: 0}
     - target: {fileID: 1588192514, guid: 8410625ede9280846afb576e1872f598, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -570,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -291.99963
+      value: -291.50015
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
@@ -760,6 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e658352c4b96f14fb95a3a9375fcad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contractAddressInput: {fileID: 655460234}
 --- !u!1 &1676239473
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +911,7 @@ MonoBehaviour:
   camPre: {fileID: 5156096413931442231, guid: 6736b38a085f03243ba52e265cbda235, type: 3}
   spawnPos: {fileID: 417574432448071709, guid: ced6ec10428650d489bd54246f7b47c8, type: 3}
   museumMode: 0
+  museumContractAddress: 
 --- !u!114 &2080205506 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4398770860270342640, guid: 1834a4ca45c30374db4d8dc769de1aff, type: 3}

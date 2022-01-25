@@ -360,7 +360,8 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\Live\OperationTypes.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
-    <Compile Include="Assets\Scripts\MuseumMode\MuseumMenu.cs" />
+    <Compile Include="Assets\Scripts\MuseumMode\Menu\MuseumMenu.cs" />
+    <Compile Include="Assets\Scripts\MuseumMode\NFTs\LoadMuseumNFTs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
