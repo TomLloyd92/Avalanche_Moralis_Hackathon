@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Moralis_OTHER\OrcController.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\JsonRpcResponse.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\ReservesCollection.cs" />
+    <Compile Include="Assets\Prefabs\UI\JoinLobbyMenu.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\MoralisFileExtensions.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\Ethereum\Types\EvmTypeInfo.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Abstractions\RelationBase.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\IpfsFileRequest.cs" />
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\IpfsFile.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\MainMenuScript.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\LobbyMenu.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\ReflectionUtilities.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\Address.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\Ethereum\EthSendTransaction.cs" />
@@ -276,6 +278,7 @@
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\Erc721Metadata.cs" />
     <Compile Include="Assets\Scripts\Moralis\EditorTools\WalletSelectListEditor.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\HostManifestData.cs" />
+    <Compile Include="Assets\MultiplayerPrefabs\BlockchainNetworkManager.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\ServerConnectionData.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp.Unity\Models\DeepLink\Wallets.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Chains.cs" />
@@ -357,9 +360,7 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\Live\OperationTypes.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
-    <Compile Include="Assets\Prefabs\UI\JoinLobbyMenu.cs" />
-    <Compile Include="Assets\MultiplayerPrefabs\BlockchainNetworkManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\LobbyMenu.cs" />
+    <Compile Include="Assets\Scripts\MuseumMode\MuseumMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

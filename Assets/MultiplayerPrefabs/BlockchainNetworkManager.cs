@@ -78,7 +78,14 @@ public class BlockchainNetworkManager : NetworkManager
 
         isGameInProgress = true;
 
-        ServerChangeScene("Demo_Level");
+        if(!museumMode)
+        {
+            ServerChangeScene("Demo_Level");
+        }
+        else
+        {
+            ServerChangeScene("Demo_Museum");
+        }
     }
 
     public override void OnStopServer()
