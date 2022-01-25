@@ -1,4 +1,5 @@
 using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,23 @@ public class SpawnPlayer : NetworkBehaviour
     public GameObject playerPrefab;
     public string walletaddress;
     bool isAuthenticated = false;
+    [SyncVar(hook = nameof(ClientHandleDisplayName))]
+    private string displayName;
+
+    public static event Action ClientOnInfoUpdated;
+
+    public string GetDisplayName()
+    {
+        return displayName;
+    }
 
     #region server
+    [Server]
+    public void SetDisplayName(string name)
+    {
+        this.displayName = name;
+    }
+
 
     public override void OnStartServer()
     {
@@ -25,6 +41,12 @@ public class SpawnPlayer : NetworkBehaviour
     #endregion
 
     #region client
+
+    private void ClientHandleDisplayName(string oldDisplayName, string newDisplayName)
+    {
+        ClientOnInfoUpdated?.Invoke();
+    }
+
     public override void OnStartClient()
     {
         if(NetworkServer.active)
@@ -39,6 +61,7 @@ public class SpawnPlayer : NetworkBehaviour
 
     public override void OnStopClient()
     {
+        ClientOnInfoUpdated?.Invoke();
         if(!isClientOnly)
         {
             return;

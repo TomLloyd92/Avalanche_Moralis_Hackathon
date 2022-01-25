@@ -9,6 +9,7 @@ public class BlockchainNetworkManager : NetworkManager
 {
     public GameObject playerPre;
     public GameObject camPre;
+    public Transform spawnPos;
 
     public static event Action ClientOnConnected;
     public static event Action ClientOnDisconnected;
@@ -28,7 +29,7 @@ public class BlockchainNetworkManager : NetworkManager
             //GameObject camInstance = Instantiate(camPre, new Vector3(0, 0, 0), Quaternion.identity);
             //NetworkServer.Spawn(camInstance, player.connectionToClient);
 
-            GameObject baseInstance = Instantiate(playerPre, new Vector3(0,0,0), Quaternion.identity);
+            GameObject baseInstance = Instantiate(playerPre, spawnPos.position, Quaternion.identity);
             NetworkServer.Spawn(baseInstance, player.connectionToClient);
 
 
@@ -36,7 +37,7 @@ public class BlockchainNetworkManager : NetworkManager
 
 
 
-        if (SceneManager.GetActiveScene().name.StartsWith("Demo_Level"))
+        if (SceneManager.GetActiveScene().name.StartsWith("Demo"))
         {
             Debug.Log("SPAWNING IN THE PLAYER");
        
@@ -91,7 +92,9 @@ public class BlockchainNetworkManager : NetworkManager
 
         SpawnPlayer player = conn.identity.GetComponent<SpawnPlayer>();
 
+
         Players.Add(player);
+        player.SetDisplayName($"Player {Players.Count}");
     }
 
 
