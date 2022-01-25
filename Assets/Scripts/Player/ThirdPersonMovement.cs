@@ -1,10 +1,13 @@
+using Cinemachine;
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ThirdPersonMovement : MonoBehaviour
+public class ThirdPersonMovement : NetworkBehaviour
 {
+    [SerializeField] private CinemachineFreeLook freeLookCamera;
     public Transform cam;
     CharacterController controller;
     public float speed = 6f;
@@ -20,12 +23,28 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        
+
+        if (isLocalPlayer)
+        {
+            Debug.Log("CAMERA TIME");
+            freeLookCamera = CinemachineFreeLook.FindObjectOfType<CinemachineFreeLook>();
+            freeLookCamera.LookAt = this.gameObject.transform;
+            freeLookCamera.Follow = this.gameObject.transform;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+            Debug.Log("CAMERA TIME");
+        if (isLocalPlayer)
+        {
+            //freeLookCamera = CinemachineFreeLook.FindObjectOfType<CinemachineFreeLook>();
+            //freeLookCamera.LookAt = this.gameObject.transform;
+            //freeLookCamera.Follow = this.gameObject.transform;
+        }
 
         updateText();
 

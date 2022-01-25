@@ -7,7 +7,7 @@ using Cinemachine;
 
 public class MovementMultiplayer : NetworkBehaviour
 {
-    [SerializeField] private CinemachineFreeLook freeLookCamera;
+    [SerializeField] private CinemachineFreeLook freeLookCamera = null;
 
     private Transform cam;
     CharacterController controller;
@@ -41,8 +41,11 @@ public class MovementMultiplayer : NetworkBehaviour
 
     private void Start()
     {
-        if(isLocalPlayer)
+        
+        if (hasAuthority)
         {
+            Debug.Log("CAMERA TIME");
+
             freeLookCamera = CinemachineFreeLook.FindObjectOfType<CinemachineFreeLook>();
             freeLookCamera.LookAt = this.gameObject.transform;
             freeLookCamera.Follow = this.gameObject.transform;
@@ -52,6 +55,8 @@ public class MovementMultiplayer : NetworkBehaviour
 
     public override void OnStartAuthority()
     {
+
+
         if (!hasAuthority)
         {
             return;
@@ -67,6 +72,8 @@ public class MovementMultiplayer : NetworkBehaviour
     [ClientCallback]
     void Update()
     {
+  
+
         if (!hasAuthority)
         {
             return;
