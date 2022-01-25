@@ -17,6 +17,8 @@ public class BlockchainNetworkManager : NetworkManager
     public List<SpawnPlayer> Players { get; } = new List<SpawnPlayer>();
 
     private bool isGameInProgress = false;
+    public bool museumMode = false;
+
 
     #region Server
 

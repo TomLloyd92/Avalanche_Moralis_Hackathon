@@ -10,7 +10,7 @@ public class LobbyMenu : MonoBehaviour
 {
     [SerializeField] public GameObject lobbyUI = null;
     [SerializeField] public Button startGameButton = null;
-    [SerializeField] public TMP_Text[] playerNameTexts = new TMP_Text[4];
+    [SerializeField] public TMP_Text[] playerNameTexts = new TMP_Text[8];
 
     private void Start()
     {
