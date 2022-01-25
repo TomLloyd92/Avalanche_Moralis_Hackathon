@@ -29,19 +29,19 @@ public class BlockchainNetworkManager : NetworkManager
             //GameObject camInstance = Instantiate(camPre, new Vector3(0, 0, 0), Quaternion.identity);
             //NetworkServer.Spawn(camInstance, player.connectionToClient);
 
-            GameObject baseInstance = Instantiate(playerPre, spawnPos.position, Quaternion.identity);
-            NetworkServer.Spawn(baseInstance, player.connectionToClient);
-
-
-        }
-
-
-
-        if (SceneManager.GetActiveScene().name.StartsWith("Demo"))
-        {
-            Debug.Log("SPAWNING IN THE PLAYER");
+            if (SceneManager.GetActiveScene().name.StartsWith("Demo"))
+            {
+                Debug.Log("SPAWNING IN THE PLAYER");
+                GameObject baseInstance = Instantiate(playerPre, spawnPos.position, Quaternion.identity);
+                NetworkServer.Spawn(baseInstance, player.connectionToClient);
        
+            }
+
+
         }
+
+
+
     }
 
     public override void OnServerConnect(NetworkConnection conn)
