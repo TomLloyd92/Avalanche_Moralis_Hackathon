@@ -82,7 +82,9 @@ public class LoadMuseumNFTs : NetworkBehaviour
             string addr = user.authData["moralisEth"]["id"].ToString();
 
             NftCollection collectionNFTs = MoralisInterface.GetClient().Web3Api.Token.GetAllTokenIds(((BlockchainNetworkManager)NetworkManager.singleton).museumContractAddress.ToLower(), (ChainList)ChainId);
-            
+
+
+
             //if(collectionNFTs.Result.Count == 0)
             //{
             //    blocksLoaded = true;
@@ -95,19 +97,23 @@ public class LoadMuseumNFTs : NetworkBehaviour
             float amountBlocks = Mathf.Ceil((collectionNFTs.Result.Count) / 4.0f);
             float amountBlockRowsAndColums = Mathf.Ceil( Mathf.Sqrt(amountBlocks));
 
+
+
             Debug.Log("Amount of Blocks: " + amountBlocks);
             Debug.Log("AMOUNT OF ROW/COL: " + amountBlockRowsAndColums);
 
             for (int i = 0; i < amountBlocks; i++)
             {
 
-                GameObject newblock = Instantiate(museumBlock, new Vector3((i % amountBlockRowsAndColums) * 25, 0, rowBlock * 20), Quaternion.identity);
-                museumBlocksInstantiated.Add(newblock.GetComponent<MuseumBlock>());
-
-                if(i != 0 && i % amountBlockRowsAndColums == 0)
+                if (i != 0 && i % amountBlockRowsAndColums == 0)
                 {
                     rowBlock++;
                 }
+
+                GameObject newblock = Instantiate(museumBlock, new Vector3((i % amountBlockRowsAndColums) * 25, 0, rowBlock * 20), Quaternion.identity);
+                museumBlocksInstantiated.Add(newblock.GetComponent<MuseumBlock>());
+
+    
 
                 if(i == amountBlocks - 1)
                 {
@@ -145,6 +151,7 @@ public class LoadMuseumNFTs : NetworkBehaviour
                 nft.GetComponent<NFT_Render>().tokenAddress = token.TokenAddress;
                 nft.GetComponent<NFT_Render>().tokenURI = token.TokenUri;
                 nft.GetComponent<NFT_Render>().tokenId = int.Parse(token.TokenId);
+                
   
 
                 currentNFT++;
