@@ -20,12 +20,14 @@ public class LoadMuseumNFTs : NetworkBehaviour
     private List<MuseumBlock> museumBlocksInstantiated;
     public GameObject museumBlock;
     public Transform[] transforms;
+    private int rowBlock = 0;
 
     //NFTs
     [SerializeField]
     private GameObject NFT;
     private int currentNFT = 0;
     private int currentBlock = 0;
+    
 
 
     #region Server
@@ -78,20 +80,21 @@ public class LoadMuseumNFTs : NetworkBehaviour
         {
             string addr = user.authData["moralisEth"]["id"].ToString();
 
-
-
-            //NftCollection collectionNFTs = MoralisInterface.GetClient().Web3Api.Token.GetAllTokenIds("0x9b40972E8b1EcAF1B4b9E015AAD33cF04B3626D2", (ChainList)ChainId);
-
             NftCollection collectionNFTs = MoralisInterface.GetClient().Web3Api.Token.GetAllTokenIds(((BlockchainNetworkManager)NetworkManager.singleton).museumContractAddress.ToLower(), (ChainList)ChainId);
             Debug.Log(collectionNFTs.Result.Count);
 
             //CREATE THE NECESSARY MUSEUM BLOCKS
             int amountBlocks = (collectionNFTs.Result.Count) / 4;
-            //float amountBlockRowsAndColums = Mathf.Ceil( Mathf.Sqrt(amountBlocks));
+            float amountBlockRowsAndColums = Mathf.Ceil( Mathf.Sqrt(amountBlocks));
 
             for (int i = 0; i < amountBlocks; i++)
             {
-                GameObject newblock = Instantiate(museumBlock, new Vector3(i * 25, 0, 0), Quaternion.identity);
+                if(i != 0 && i % amountBlockRowsAndColums == 0)
+                {
+                    rowBlock++;
+                }
+
+                GameObject newblock = Instantiate(museumBlock, new Vector3((i % amountBlockRowsAndColums) * 25, 0, rowBlock * 20), Quaternion.identity);
                 museumBlocksInstantiated.Add(newblock.GetComponent<MuseumBlock>());
 
                 if(i == amountBlocks - 1)
