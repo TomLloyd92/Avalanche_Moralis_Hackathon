@@ -283,7 +283,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
       propertyPath: m_Text
-      value: 0x9b40972E8b1EcAF1B4b9E015AAD33cF04B3626D2
+      value: 0xdb0ed936383Ea768228B94B10f69f103A977D5E6
       objectReference: {fileID: 0}
     - target: {fileID: 1588192514, guid: 8410625ede9280846afb576e1872f598, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -585,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -291.99936
+      value: -292.00146
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
@@ -776,7 +776,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e658352c4b96f14fb95a3a9375fcad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   contractAddressInput: {fileID: 655460234}
+--- !u!114 &1588192516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588192512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4023734222
+  serverOnly: 0
+  m_AssetId: 8410625ede9280846afb576e1872f598
+  hasSpawned: 0
 --- !u!1 &1676239473
 GameObject:
   m_ObjectHideFlags: 0

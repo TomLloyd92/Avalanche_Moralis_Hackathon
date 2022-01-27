@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class MuseumMenu : MonoBehaviour
+public class MuseumMenu : NetworkBehaviour
 {
     [SerializeField] private TMP_InputField contractAddressInput = null;
 
@@ -21,6 +21,14 @@ public class MuseumMenu : MonoBehaviour
     }
 
     public void museumModeActive()
+    {
+        ((BlockchainNetworkManager)NetworkManager.singleton).museumMode = true;
+        ((BlockchainNetworkManager)NetworkManager.singleton).museumContractAddress = contractAddressInput.text;
+        RpcMuseumMode();
+    }
+
+    [ClientRpc]
+    void RpcMuseumMode()
     {
         ((BlockchainNetworkManager)NetworkManager.singleton).museumMode = true;
         ((BlockchainNetworkManager)NetworkManager.singleton).museumContractAddress = contractAddressInput.text;
