@@ -242,6 +242,7 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Abstractions\IMoralisCommandRunner.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Objects\MoralisRole.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp\WalletConnectSharp.Core\Models\WCSessionUpdate.cs" />
+    <Compile Include="Assets\Scripts\MuseumMode\NFTs\LoadMuseumNFTs.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\Infrastructure\MoralisQueryService.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp.Unity\Network\NativeWebSocketTransport.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Utilities\XamarinAttributes.cs" />
@@ -342,6 +343,7 @@
     <Compile Include="Assets\Scripts\Moralis\Moralis.Web3Api.Core\Models\Block.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\Billboard.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ClientServices\MoralisObjectService.cs" />
+    <Compile Include="Assets\Scripts\MuseumMode\Menu\MuseumMenu.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Operations\MoralisUniqueAddOperation.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\Live\MoralisLiveQueryDelegates.cs" />
     <Compile Include="Assets\Scripts\WalletConnectSharp.Unity\Models\DeepLink\AppInfo.cs" />
@@ -360,8 +362,7 @@
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Queries\Live\OperationTypes.cs" />
     <Compile Include="Assets\Scripts\Moralis_OTHER\IWeaponCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Moralis\MoralisDotNet\Platform\Services\ServiceHub.cs" />
-    <Compile Include="Assets\Scripts\MuseumMode\Menu\MuseumMenu.cs" />
-    <Compile Include="Assets\Scripts\MuseumMode\NFTs\LoadMuseumNFTs.cs" />
+    <Compile Include="Assets\Scripts\MuseumMode\NFTs\MuseumBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

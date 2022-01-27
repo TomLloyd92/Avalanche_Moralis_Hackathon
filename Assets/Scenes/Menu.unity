@@ -585,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -291.50015
+      value: -287.00125
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
@@ -745,7 +745,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Network Manager Menu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2598005952278767465, guid: 1834a4ca45c30374db4d8dc769de1aff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1834a4ca45c30374db4d8dc769de1aff, type: 3}
 --- !u!114 &1561941687 stripped
 MonoBehaviour:
@@ -907,6 +908,7 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 2241404250344135698, guid: d2beaa7cc4c77a04ca2bff108f1e8737, type: 3}
   - {fileID: 5156096413931442231, guid: 6736b38a085f03243ba52e265cbda235, type: 3}
+  - {fileID: 3487010818979824852, guid: 81ac9f61f32395045a080e35ad990684, type: 3}
   playerPre: {fileID: 2241404250344135698, guid: d2beaa7cc4c77a04ca2bff108f1e8737, type: 3}
   camPre: {fileID: 5156096413931442231, guid: 6736b38a085f03243ba52e265cbda235, type: 3}
   spawnPos: {fileID: 417574432448071709, guid: ced6ec10428650d489bd54246f7b47c8, type: 3}
