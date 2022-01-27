@@ -283,7 +283,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
       propertyPath: m_Text
-      value: 0xF70576a5255fcCfE6551f3eC8De74c9E002E1A82
+      value: 0x9b40972E8b1EcAF1B4b9E015AAD33cF04B3626D2
       objectReference: {fileID: 0}
     - target: {fileID: 1588192514, guid: 8410625ede9280846afb576e1872f598, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -585,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -287.00125
+      value: -291.99936
       objectReference: {fileID: 0}
     - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_IsActive
