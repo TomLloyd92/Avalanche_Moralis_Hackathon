@@ -59,8 +59,6 @@ public class MainMenuScript : MonoBehaviour
     void Start()
     {
         walletConnect = GameObject.Find("WalletConnect").GetComponent<WalletConnect>();
-
-        Debug.Log(walletConnect);
     
         menuBackground = (Image)gameObject.GetComponent(typeof(Image));
 
@@ -72,7 +70,9 @@ public class MainMenuScript : MonoBehaviour
             ShortVersion = Version
         };
 
+
         qrMenu.SetActive(false);
+
 
 #if UNITY_ANDROID || UNITY_IOS
         // We're in mobile so show the joystick.
@@ -84,6 +84,17 @@ public class MainMenuScript : MonoBehaviour
         if (MoralisInterface.IsLoggedIn())
         {
             Debug.Log("User is already logged in to Moralis.");
+            Debug.Log("USER IS ALREADY LOGGED IN TO MORALIS");
+
+            if(SceneManager.GetActiveScene().name != "WalletLogin")
+            {
+                return;
+            }
+            else
+            {
+                SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+            }
+
 
             // Transition to main game scene
 
