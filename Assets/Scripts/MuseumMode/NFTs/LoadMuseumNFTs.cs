@@ -17,6 +17,15 @@ public class LoadMuseumNFTs : NetworkBehaviour
     private bool tokensLoaded;
     private bool blocksLoaded;
 
+    //Wall
+    public GameObject outsideWall;
+    public GameObject outSideWallSide;
+    private GameObject[] allWalls;
+    private int currentWalls = 1;
+    private int wallX = 0;
+    private int wallZ = 0;
+
+
     //Block
     [SerializeField]
     private List<MuseumBlock> museumBlocksInstantiated;
@@ -85,24 +94,32 @@ public class LoadMuseumNFTs : NetworkBehaviour
 
             NftCollection collectionNFTs = MoralisInterface.GetClient().Web3Api.Token.GetAllTokenIds(((BlockchainNetworkManager)NetworkManager.singleton).museumContractAddress.ToLower(), (ChainList)ChainId);
 
-
-
-            //if(collectionNFTs.Result.Count == 0)
-            //{
-            //    blocksLoaded = true;
-            //    yield return 0;
-            //}
-
-            //Debug.Log(collectionNFTs.Result.Count);
-
             //CREATE THE NECESSARY MUSEUM BLOCKS
             float amountBlocks = Mathf.Ceil((collectionNFTs.Result.Count) / 4.0f);
             float amountBlockRowsAndColums = Mathf.Ceil( Mathf.Sqrt(amountBlocks));
 
+            //OUTER WALLS
 
+            for(int i =0; i < amountBlockRowsAndColums ; i++)
+            {
+                GameObject newblock = Instantiate(outsideWall, new Vector3(-5 , 0, (i * 20) -5 ), Quaternion.Euler(new Vector3(0, currentWalls * 90, 0)));
+            }
+            currentWalls++;
 
-            Debug.Log("Amount of Blocks: " + amountBlocks);
-            Debug.Log("AMOUNT OF ROW/COL: " + amountBlockRowsAndColums);
+            for (int i = 0; i < amountBlockRowsAndColums; i++)
+            {
+                GameObject newblock = Instantiate(outSideWallSide, new Vector3((i * 25) -5, 0,amountBlockRowsAndColums * 15 ), Quaternion.Euler(new Vector3(0, currentWalls * 90, 0)));
+            }
+            currentWalls++;
+            for (int i = 0; i < amountBlockRowsAndColums ; i++)
+            {
+                GameObject newblock = Instantiate(outsideWall, new Vector3(-5 + (amountBlockRowsAndColums * 25), 0, (i * 20) + 15), Quaternion.Euler(new Vector3(0, currentWalls * 90, 0)));
+            }
+            currentWalls++;
+            for (int i = 0; i < amountBlockRowsAndColums; i++)
+            {
+                GameObject newblock = Instantiate(outSideWallSide, new Vector3((i * 25)+ 20, 0, -5), Quaternion.Euler(new Vector3(0, currentWalls * 90, 0)));
+            }
 
             for (int i = 0; i < amountBlocks; i++)
             {
@@ -122,6 +139,9 @@ public class LoadMuseumNFTs : NetworkBehaviour
                     blocksLoaded = true;
                 }
             }
+
+
+
         }
         yield return 0;
     }

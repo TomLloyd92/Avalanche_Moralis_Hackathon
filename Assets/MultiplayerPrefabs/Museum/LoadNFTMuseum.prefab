@@ -63,7 +63,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   ChainId: 43113
-  NFT: {fileID: 336468318204450734, guid: 55d8f6fa8ea4c7e42b98e8e92b3700cc, type: 3}
+  outsideWall: {fileID: 5855982751966052050, guid: 0d632a8942d804d418c726bc2e2d2f2f, type: 3}
+  outSideWallSide: {fileID: 3095129190231294949, guid: 32ba5cebcaaca6e4ebca75072ef14350, type: 3}
+  museumBlocksInstantiated: []
+  museumBlock: {fileID: 3487010818979824852, guid: 81ac9f61f32395045a080e35ad990684, type: 3}
   transforms:
   - {fileID: 417574432448071709, guid: ced6ec10428650d489bd54246f7b47c8, type: 3}
-  museumBlock: {fileID: 3487010818979824852, guid: 81ac9f61f32395045a080e35ad990684, type: 3}
+  NFT: {fileID: 336468318204450734, guid: 55d8f6fa8ea4c7e42b98e8e92b3700cc, type: 3}

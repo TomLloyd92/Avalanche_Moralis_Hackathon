@@ -463,6 +463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -291.49957
+      objectReference: {fileID: 0}
     - target: {fileID: 2950721468647748005, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: walletConnect
       value: 
