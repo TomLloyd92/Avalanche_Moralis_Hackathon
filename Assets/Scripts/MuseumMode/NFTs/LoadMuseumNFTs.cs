@@ -11,6 +11,8 @@ using Mirror;
 public class LoadMuseumNFTs : NetworkBehaviour
 {
     //ID + Bools
+    //43113 Testnet
+    //43114 Avalanche Net
     public int ChainId;
     private bool tokensLoaded;
     private bool blocksLoaded;
@@ -139,11 +141,15 @@ public class LoadMuseumNFTs : NetworkBehaviour
             //Pupulate NFTs
             foreach (Nft token in collectionNFTs.Result)
             {
+
+            
                 if (currentNFT == 4)
                 {
                     currentBlock++;
                     currentNFT = 0;
                 }
+
+
 
                 GameObject nft = Instantiate(NFT, museumBlocksInstantiated[currentBlock].GetComponent<MuseumBlock>().displayPositions[currentNFT].position, Quaternion.Euler(new Vector3(0, currentNFT * 90, 0)));
 
@@ -151,8 +157,9 @@ public class LoadMuseumNFTs : NetworkBehaviour
                 nft.GetComponent<NFT_Render>().tokenAddress = token.TokenAddress;
                 nft.GetComponent<NFT_Render>().tokenURI = token.TokenUri;
                 nft.GetComponent<NFT_Render>().tokenId = int.Parse(token.TokenId);
-                
-  
+
+                //Debug.Log(token.TokenUri);
+       
 
                 currentNFT++;
             }
