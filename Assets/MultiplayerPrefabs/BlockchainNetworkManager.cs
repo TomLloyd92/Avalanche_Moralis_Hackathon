@@ -17,6 +17,11 @@ public class BlockchainNetworkManager : NetworkManager
     public List<SpawnPlayer> Players { get; } = new List<SpawnPlayer>();
 
     private bool isGameInProgress = false;
+    public bool museumMode = false;
+
+    [SerializeField]
+    public string museumContractAddress = "";
+
 
     #region Server
 
@@ -31,17 +36,10 @@ public class BlockchainNetworkManager : NetworkManager
 
             if (SceneManager.GetActiveScene().name.StartsWith("Demo"))
             {
-                Debug.Log("SPAWNING IN THE PLAYER");
                 GameObject baseInstance = Instantiate(playerPre, spawnPos.position, Quaternion.identity);
                 NetworkServer.Spawn(baseInstance, player.connectionToClient);
-       
             }
-
-
         }
-
-
-
     }
 
     public override void OnServerConnect(NetworkConnection conn)
@@ -76,7 +74,15 @@ public class BlockchainNetworkManager : NetworkManager
 
         isGameInProgress = true;
 
-        ServerChangeScene("Demo_Level");
+        if(!museumMode)
+        {
+            ServerChangeScene("Demo_Level");
+        }
+        else
+        {
+            Debug.Log("Museum Address: " + museumContractAddress);
+            ServerChangeScene("Demo_Museum");
+        }
     }
 
     public override void OnStopServer()

@@ -41,6 +41,12 @@ namespace Moralis.Web3Api.Models
 		[JsonProperty(PropertyName = "token_uri")]
 		public string TokenUri { get; set; }
 
+		//Image
+		[DataMember(Name = "image", EmitDefaultValue = false)]
+		[JsonProperty(PropertyName = "image")]
+		public string Image { get; set; }
+
+
 		/// <summary>
 		/// The metadata of the token
 		/// </summary>
@@ -80,6 +86,10 @@ namespace Moralis.Web3Api.Models
 		public string Symbol { get; set; }
 
 
+
+		
+
+
 		/// <summary>
 		/// Get the string presentation of the object
 		/// </summary>
@@ -97,6 +107,7 @@ namespace Moralis.Web3Api.Models
 			sb.Append("  Amount ").Append(Amount).Append("\n");
 			sb.Append("  Name ").Append(Name).Append("\n");
 			sb.Append("  Symbol ").Append(Symbol).Append("\n");
+			sb.Append("  Image ").Append(Image).Append("\n");
 			sb.Append("}");
 
 			return sb.ToString();
