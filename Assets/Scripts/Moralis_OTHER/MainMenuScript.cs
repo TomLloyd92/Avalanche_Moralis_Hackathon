@@ -37,6 +37,7 @@ using WalletConnectSharp.Core.Models;
 using WalletConnectSharp.Unity;
 using Assets.Scripts;
 using Assets;
+using Mirror;
 
 /// <summary>
 /// Example class that demonstrates a game menu that incorporates Wallet 
@@ -57,6 +58,10 @@ public class MainMenuScript : MonoBehaviour
 
     void Start()
     {
+        walletConnect = GameObject.Find("WalletConnect").GetComponent<WalletConnect>();
+
+        Debug.Log(walletConnect);
+    
         menuBackground = (Image)gameObject.GetComponent(typeof(Image));
 
         HostManifestData hostManifestData = new HostManifestData()
@@ -169,6 +174,7 @@ public class MainMenuScript : MonoBehaviour
         if (user != null)
         {
             Debug.Log($"User {user.username} logged in successfully. ");
+            SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         }
         else
         {
@@ -190,6 +196,21 @@ public class MainMenuScript : MonoBehaviour
         // Logout the Moralis User.
         await MoralisInterface.LogOutAsync();
         // Close out the application.
+
+        //Close the server
+        if (NetworkServer.active && NetworkClient.isConnected)
+        {
+            NetworkManager.singleton.StopHost();
+        }
+        else
+        {
+            NetworkManager.singleton.StopClient();
+        }
+
+
+        Destroy(walletConnect.gameObject);
+        SceneManager.LoadScene("WalletLogin", LoadSceneMode.Single);
+
         Application.Quit();
     }
 

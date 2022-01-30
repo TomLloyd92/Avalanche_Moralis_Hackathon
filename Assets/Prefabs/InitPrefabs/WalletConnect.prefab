@@ -56,14 +56,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801bffbf4c62cc244b55ea230d19649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultWallet: 1
-  autoSaveAndResume: 1
+  DefaultWallet: 2
+  autoSaveAndResume: 0
   connectOnAwake: 0
   connectOnStart: 1
   createNewSessionOnSessionDisconnect: 1
   connectSessionRetryCount: 3
   customBridgeUrl: 
-  chainId: 43113
+  chainId: 1
   ConnectedEvent:
     m_PersistentCalls:
       m_Calls:

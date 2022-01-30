@@ -431,26 +431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5323492861691145563, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: sceneId
-      value: 1805211063
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458387695302, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1417559458672933477, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: walletConnect
       value: 
       objectReference: {fileID: 1561941687}
-    - target: {fileID: 1417559458672933477, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: MoralisServerURI
-      value: https://vmjdcyv0xxtm.usemoralis.com:2053/server
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458672933477, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: MoralisApplicationId
-      value: kh5ZPG2mM7ab1Lu2rmBjlBi4rHmpbViWj2kuikOa
-      objectReference: {fileID: 0}
     - target: {fileID: 1417559458854033131, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -539,58 +523,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1417559458854033143, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: PopulateWallet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: LoadNFTs, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623585, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559458878623596, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559459487634487, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: ChainId
-      value: 43113
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559459778662456, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: ChainId
-      value: 43113
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417559459778662457, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -289.00058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2166798800485909073, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2950721468647748005, guid: 0d95d09cd2cc7024489c50d661e2eced, type: 3}
       propertyPath: walletConnect
       value: 
@@ -667,18 +599,6 @@ PrefabInstance:
     - target: {fileID: 5175095894888145820, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
       propertyPath: m_Name
       value: WalletConnect
-      objectReference: {fileID: 0}
-    - target: {fileID: 5175095894888145821, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
-      propertyPath: chainId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5175095894888145821, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
-      propertyPath: DefaultWallet
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5175095894888145821, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
-      propertyPath: autoSaveAndResume
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5175095894888145821, guid: ce99fd52594d5e54f972689a083ac409, type: 3}
       propertyPath: ConnectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
