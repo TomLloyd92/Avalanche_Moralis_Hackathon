@@ -51,7 +51,10 @@ public class TokensBoard : NetworkBehaviour
     /// <summary>
     /// Vertical layout to hold the Token item list.
     /// </summary>
-    public Transform TokenListTransform;
+    public Transform[] TokenListTransform = new Transform[3];
+
+    public TMP_Text address;
+    public TMP_Text nativeBalance;
 
     /// <summary>
     /// Chain ID to fetch tokens from. Might be better to make this
@@ -60,10 +63,14 @@ public class TokensBoard : NetworkBehaviour
     public int ChainId;
 
     private bool tokensLoaded;
-    private static int ammountOfTokens = 1;
+    private static int ammountOfTokens = 0;
+
+    private bool nativeLoaded;
 
     private void Update()
     {
+        nativeTokenPopulate();
+
         PopulateWallet();
     }
 
@@ -77,6 +84,57 @@ public class TokensBoard : NetworkBehaviour
             tokensLoaded = true;
         }
     }
+
+    public void nativeTokenPopulate()
+    {
+        if (!nativeLoaded)
+        {
+            StartCoroutine(BuildNativeToken());
+            
+        }
+    }
+
+    IEnumerator BuildNativeToken()
+    {
+
+        // Get user object and display user name
+        MoralisUser user = MoralisInterface.GetUser();
+
+        if (user != null)
+        {
+            // Get user address from user auth data.
+            string addr = user.authData["moralisEth"]["id"].ToString();
+
+            address.text = addr;
+
+            // Retrieve account balanace.
+            NativeBalance bal =
+                MoralisInterface.GetClient().Web3Api.Account.GetNativeBalance(addr.ToLower(),
+                                            (ChainList)ChainId);
+            double balance = 0.0;
+
+            // Make sure a response to the balanace request weas received. The 
+            // IsNullOrWhitespace check may not be necessary ...
+            if (bal != null && !string.IsNullOrWhiteSpace(bal.Balance))
+            {
+                double.TryParse(bal.Balance, out balance);
+            }
+
+            // Display native token amount (ETH) in fractions of ETH.
+            // NOTE: May be better to link this to chain since some tokens may have
+            // more than 18 sigjnificant figures.
+            nativeBalance.text = string.Format("{0:0.##} AVAX", balance / (double)Mathf.Pow(10.0f, 18.0f));
+            nativeLoaded = true;
+        }
+        else
+        {
+            //balanceText.text = "0";
+        }
+
+
+        yield return 0;
+    }
+
 
     IEnumerator BuildERC20TokenList()
     {
@@ -110,14 +168,14 @@ public class TokensBoard : NetworkBehaviour
 
 
                 //TokenListTransform.position += new Vector3(0, ammountOfTokens * 500, 0);
-                var tokenObj = Instantiate(ListItemPrefab, TokenListTransform);
+                var tokenObj = Instantiate(ListItemPrefab, TokenListTransform[ammountOfTokens]);
                 var tokenSymbol = tokenObj.GetFirstChildComponentByName<TMP_Text>("TokenSymbolText", false);
                 var tokenBalanace = tokenObj.GetFirstChildComponentByName<TMP_Text>("TokenCountText", false);
                 var tokenImage = tokenObj.GetFirstChildComponentByName<Image>("TokenThumbNail", false);
                 var tokenButton = tokenObj.GetComponent<Button>();
                 var rectTransform = tokenObj.GetComponent<RectTransform>();
 
-                var parentTransform = TokenListTransform.GetComponent<RectTransform>();
+                var parentTransform = TokenListTransform[ammountOfTokens].GetComponent<RectTransform>();
                 double balance = 0.0;
                 float tokenDecimals = 18.0f;
 
