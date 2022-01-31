@@ -8,6 +8,7 @@ public class SpawnPlayer : NetworkBehaviour
 {
     public GameObject playerPrefab;
     public string walletaddress;
+    public string fullWalletAddress;
     bool isAuthenticated = false;
     [SyncVar(hook = nameof(ClientHandleDisplayName))]
     private string displayName;
@@ -96,6 +97,7 @@ public class SpawnPlayer : NetworkBehaviour
         {
             string addr = MoralisInterface.GetUser().authData["moralisEth"]["id"].ToString();
 
+            fullWalletAddress = addr;
             walletaddress = string.Format("{0}...{1}", addr.Substring(0, 6), addr.Substring(addr.Length - 3, 3));
 
             isAuthenticated = true;
