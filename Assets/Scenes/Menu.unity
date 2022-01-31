@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &655460234 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
-  m_PrefabInstance: {fileID: 947766872}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &853921677
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,8 +270,44 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 373073131, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_text
+      value: 0xdb0ed936383Ea768228B94B10f69f103A977D5E6
+      objectReference: {fileID: 0}
     - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
       propertyPath: m_Text
+      value: 0xdb0ed936383Ea768228B94B10f69f103A977D5E6
+      objectReference: {fileID: 0}
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 947766873}
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_text
+      objectReference: {fileID: 0}
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324295135, guid: 8410625ede9280846afb576e1872f598, type: 3}
+      propertyPath: m_text
       value: 0xdb0ed936383Ea768228B94B10f69f103A977D5E6
       objectReference: {fileID: 0}
     - target: {fileID: 1588192514, guid: 8410625ede9280846afb576e1872f598, type: 3}
@@ -367,6 +392,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8410625ede9280846afb576e1872f598, type: 3}
+--- !u!114 &947766873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1324295135, guid: 8410625ede9280846afb576e1872f598, type: 3}
+  m_PrefabInstance: {fileID: 947766872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &947766874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 544744990, guid: 8410625ede9280846afb576e1872f598, type: 3}
+  m_PrefabInstance: {fileID: 947766872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1049856657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,7 +753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  contractAddressInput: {fileID: 655460234}
+  contractAddressInput: {fileID: 947766874}
 --- !u!114 &1588192516
 MonoBehaviour:
   m_ObjectHideFlags: 0
